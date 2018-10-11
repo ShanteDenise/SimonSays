@@ -63,6 +63,10 @@
     -ms-transform: translateY(-200%)rotate(180deg);
     -o-transform: translateY(-200%)rotate(180deg);
 }
+
+.onred{
+    background-color:red;
+}
 #green{
     border-top-right-radius: 100%;
     background-color: #29d935;
