@@ -96,10 +96,7 @@
     height:30px;
     width: 10%;
     background-image: radial-gradient( rgba(255, 2, 25, 1), rgb(255, 2, 5));
-    /*background-image:linear-gradient (rgba(0,132,255,1) ,rgb(0, 132, 255);
-    *//*border-bottom: solid 7px rgb(25, 25, 175);
-    border-right: solid 2px rgb(26, 26, 206);
-    */border-bottom: solid 7px rgb(61, 7, 7);
+    border-bottom: solid 7px rgb(61, 7, 7);
     border-right: solid 2px rgb(43, 7, 2);
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -179,6 +176,8 @@
     right: 0;
     bottom: 0;
     background-color: rgb(9, 8, 8);
+    
+
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -197,6 +196,7 @@
   
   input:checked + .slider {
     background-color: rgb(8, 78, 1);
+    
   }
   
   
