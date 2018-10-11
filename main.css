@@ -206,4 +206,19 @@
     transform: translateX(26px);
   }
 
-  
+  .wordsContainer{
+      display: flex;
+      padding:0%;
+      margin-bottom:-13%;
+     
+  }
+  .words{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 14px;
+      margin-right:40px;
+      transform: translateY(-30px)translate(100px)   ;
+      -webkit-transform: translateY(-30px)translate(100px)   ;
+      -moz-transform: translateY(-30px)translate(100px)   ;
+      -ms-transform: translateY(-30px)translate(100px)   ;
+      -o-transform: translateY(-30px)translate(100px)   ;
+}
