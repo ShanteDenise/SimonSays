@@ -30,9 +30,9 @@
 #centerConsole{
     height:50%;
     width: 50%;
-    /* background-color:rgb(250, 247, 250); */
-    /* background-color: #acacac; */
-    background: linear-gradient(to top, #acacac 50%, black 50%);
+    /*background-color:rgb(250, 247, 250);
+    *//*background-color: #acacac;
+    */background: linear-gradient(to top, #acacac 50%, black 50%);
     transform:translateY(-317%) translateX(40%);
     border-radius: 50%;
     border: solid 20px black;
@@ -93,21 +93,24 @@
 }
 
 #onButton{
-    height:10%;
+    height:30px;
     width: 10%;
     background-image: radial-gradient( rgba(255, 2, 25, 1), rgb(255, 2, 5));
     /*background-image:linear-gradient (rgba(0,132,255,1) ,rgb(0, 132, 255);
-    */
-    /* border-bottom: solid 7px rgb(25, 25, 175);
-    border-right: solid 2px rgb(26, 26, 206); */
-    border-bottom: solid 7px rgb(61, 7, 7);
+    *//*border-bottom: solid 7px rgb(25, 25, 175);
+    border-right: solid 2px rgb(26, 26, 206);
+    */border-bottom: solid 7px rgb(61, 7, 7);
     border-right: solid 2px rgb(43, 7, 2);
-    transform:    translateY(10%)translateX(80px);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    transform: translateX(30px);
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    -o-transform: translateX(30px);
 }
 
 #logo{
@@ -144,5 +147,63 @@
     -o-transform: translateY(-50px);
 }
 
+.buttonContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(9, 8, 8);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(8, 78, 1);
+  }
+  
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
 
   
