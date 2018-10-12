@@ -54,9 +54,9 @@
     background-image: linear-gradient(to top, rgba(50, 50, 50, 0.2), rgba(10, 10, 10, 0.3));
     z-index: 1;
 }
-#red{
+.red{
     border-top-right-radius: 100%;
-    background-color:red;
+    background-color:rgb(107, 5, 5);
     transform: translateY(-200%)rotate(180deg);
     -webkit-transform: translateY(-200%)rotate(180deg);
     -moz-transform: translateY(-200%)rotate(180deg);
@@ -64,36 +64,46 @@
     -o-transform: translateY(-200%)rotate(180deg);
 }
 
-.onred{
-    background-color:red;
-}
-#green{
+.green{
     border-top-right-radius: 100%;
-    background-color: #29d935;
+    background-color: green;
     transform: translate(100%);
     -webkit-transform: translate(100%);
     -moz-transform: translate(100%);
     -ms-transform: translate(100%);
     -o-transform: translate(100%);
 }
-#yellow{
+.yellow{
     border-top-right-radius: 100%;
-    background-color: yellow;
+    background-color: rgb(128, 128, 5);
     transform: translateY(-200%)rotate(-90deg);
     -webkit-transform: translateY(-200%)rotate(-90deg);
     -moz-transform: translateY(-200%)rotate(-90deg);
     -ms-transform: translateY(-200%)rotate(-90deg);
     -o-transform: translateY(-200%)rotate(-90deg);
 }
-#blue{
+.blue{
     border-top-right-radius: 100%;
-    background-color:blue;
+    background-color:rgb(5, 5, 131);
     z-index: 2;
     transform: translate(100%) rotate(90deg);
     -webkit-transform: translate(100%) rotate(90deg);
     -moz-transform: translate(100%) rotate(90deg);
     -ms-transform: translate(100%) rotate(90deg);
     -o-transform: translate(100%) rotate(90deg);
+}
+
+.onred{
+    background-color:red;
+}
+.ongreen{
+    background-color:#29d935;
+}
+.onyellow{
+    background-color:yellow;
+}
+.onblue{
+    background-color:blue;
 }
 
 #onButton{
