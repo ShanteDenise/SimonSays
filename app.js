@@ -3,7 +3,7 @@
  var blue = $('.blue');
  var yellow = $('.yellow');
  var green = $('.green');
- var level= $('#level');
+ var level= 0;
  var on = $('#onButton')
  var power = false;
  var PlayerSeq = [];
@@ -11,83 +11,100 @@
  var round = 1;
  var win;
  var start = 'off';
-//  var lock = false;
  var speed = 1000;
+//  let color = $('.tile').get(0).className.split(' ')[1];
+
+
 
 
  //When the game is turned on game will animate and flash to indicate turning on
  // After user pressed start button. Button will light up red for the remainder of the game. 
 $('.slider').on("click", function turnOn(){
-    red.fadeOut(350).fadeIn(350).fadeOut(350).fadeIn(350)
-    blue.delay(550).fadeOut(350).fadeIn(350).fadeOut(350).fadeIn(350)
-    yellow.delay(700).fadeIn(350).fadeOut(350).fadeOut(350).fadeIn(350)
-    green.delay(450).fadeIn(350).fadeOut(350).fadeOut(350).fadeIn(350)
-    level.css("color", "black").fadeOut(350).fadeIn(350);
+    // red.fadeOut(350).fadeIn(350).fadeOut(350).fadeIn(350)
+    // blue.delay(550).fadeOut(350).fadeIn(350).fadeOut(350).fadeIn(350)
+    // yellow.delay(700).fadeIn(350).fadeOut(350).fadeOut(350).fadeIn(350)
+    // green.delay(450).fadeIn(350).fadeOut(350).fadeOut(350).fadeIn(350)
+    $('#level').css("color", "black").fadeOut(350).fadeIn(350);
     start = 'on'
-    PlayerSeq = [];
-    simonSeq = [];
+ 
 })
 
 //If the start is off do nothing. If the start is turned on then play clicking sound 
 //and change the styling of the on button to appear that it has been pushed in. 
-on.click(function  (){
+//Simons sequence starts
+   on.click(function start (){
+    console.log(level)
     if (start === 'off'){
      return } 
      $('#audioOn').get(0).play();
-        on.css("background-color", "blue");
-        on.css("border-bottom" , "none");
-        on.css("border-right" , "none");
-        level.html('001');
-        var PlayerSeq = [];
-        var simonSeq = [];
-        sequenceOne ();
+        // on.css("background-color", "blue");
+        // on.css("border-bottom" , "none");
+        // on.css("border-right" , "none");
+        $('#level').text(level);
+        randomNumbers();
+        var i = 0
+        var myInterval = setInterval(function(){
+            id = simonSeq[i];
+            let color = $('.tile').get(0).className.split(' ')[1];
+            console.log(color);
+            i++
+            if(i == simonSeq.length){
+                clearInterval(myInterval);
+            }
+            // add sound here
+
+        }, 1000);
+       
+         level ++;
+         PlayerSeq = [];
+
+        
+    
 
 })
+
+
+
+//Get random Number
+function randomNumbers(){
+    var random =  Math.floor((Math.random() * 4) + 1);
+    simonSeq.push(random)
+  
+  
+  }
+
+
 //On mousedown add class 
 $('.tile').on('mousedown', function(){
     if(start === 'off'){
         return}
-        let color = $(this).get(0).className.split(' ')[1]
-        $(this).addClass('on'+ color)      
+        let brighten = $(this).get(0).className.split(' ')[1]
+        $(this).addClass('on'+ brighten)      
 })
 
 //On mouseup remove class
 $('.tile').on('mouseup', function(){
     if(start === 'off'){
         return}
-    let color = $(this).get(0).className.split(' ')[1]
-    $(this).removeClass('on'+ color);
+    let brighten = $(this).get(0).className.split(' ')[1]
+    $(this).removeClass('on'+ brighten);
 
 })
 
 // Sequence for simon. 
 
-function sequenceOne (){
-    randomNumbers()
-    var i = 0;
-    var myInterval = setInterval(function(){
-    }, 1000);
-}
-
-
-//function to generate random numbers to be pushed into Simons sequence empty array.
-function randomNumbers(){
-    var random = Math.floor((Math.Random() * 4))
-    simonSeq.push(random)
-    console.log(random)
-
-}
-
-
-
-
-
-
-
-
-// for (let level = 1; level <= 20; level++){
-//     console.log(level)
+// function sequenceOne (){
+//     randomNumbers()
+//     var i = 0;
+//     var myInterval = setInterval(function(){
+//     }, 1000);
 // }
+
+
+
+
+
+
 
 
 
