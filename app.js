@@ -7,7 +7,7 @@
  var on = $('#onButton')
  var power = false;
  var PlayerSeq = [];
- var SimonsSeq = [];
+ var simonSeq = [];
  var round = 1;
  var win;
  var start = 'off';
@@ -24,6 +24,8 @@ $('.slider').on("click", function turnOn(){
     green.delay(450).fadeIn(350).fadeOut(350).fadeOut(350).fadeIn(350)
     level.css("color", "black").fadeOut(350).fadeIn(350);
     start = 'on'
+    PlayerSeq = [];
+    simonSeq = [];
 })
 
 //If the start is off do nothing. If the start is turned on then play clicking sound 
@@ -36,6 +38,10 @@ on.click(function  (){
         on.css("border-bottom" , "none");
         on.css("border-right" , "none");
         level.html('001');
+        var PlayerSeq = [];
+        var simonSeq = [];
+        sequenceOne ();
+
 })
 //On mousedown add class 
 $('.tile').on('mousedown', function(){
@@ -54,9 +60,20 @@ $('.tile').on('mouseup', function(){
 
 })
 
+// Sequence for simon. 
+
+function sequenceOne (){
+    randomNumbers()
+    var i = 0;
+    var myInterval = setInterval(function(){
+    }, 1000);
+}
+
+
+//function to generate random numbers to be pushed into Simons sequence empty array.
 function randomNumbers(){
-    var random = Math.floor(Math.Random() * 4)
-    SimonsSeq.push(random)
+    var random = Math.floor((Math.Random() * 4))
+    simonSeq.push(random)
     console.log(random)
 
 }
