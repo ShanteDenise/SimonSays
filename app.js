@@ -110,7 +110,7 @@ function winner(){
         setTimeout(function () {
             $('#winner').css("display", "none")
             $('#congrats').get(0).pause();
-            },4000)
+            },7000)
 
         start = 'off'
     }
