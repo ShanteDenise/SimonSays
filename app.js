@@ -42,30 +42,32 @@ $('.slider').on("click", function turnOn(){
 
 
    on.click(function start (){
-    console.log(level)
+    // console.log(level)
     if (start === 'off'){
      return } 
-    //  $('#audioOn').get(0).play();
-    //     on.css("border-bottom" , "none");
-    //     on.css("border-right" , "none");
+     $('#audioOn').get(0).play();
+        on.css("border-bottom" , "none");
+        on.css("border-right" , "none");
     //     $('#level').text(level);
+
         randomNumbers();
-        var myInterval = setInterval(function(){
+       
             // id = simonSeq[i];
-            // let color = $('.tile').attr('class').split(' ')[1];
+            let color = $('.tile').attr('class').split(' ')[1];
             
             for(var j = 0; j < simonSeq.length; j++){
-              let free =  $('.' + simonSeq[j]).addClass('on' + simonSeq[j])  
-            console.log(free);
-            // i++
+            setTimeout(function(){
+             $('.' + simonSeq[j]).addClass('on' + simonSeq[j])
+            },1000);
+
+             setTimeout(function(){
+             $('.' + simonSeq[j]).removeClass('on' + simonSeq[j])
+             },1000);
             
-            // if(i == simonSeq.length){
-            //     clearInterval(myInterval);
-            // }
             // add sound here
             }
 
-        }, 1000);
+       
     
          level ++;
          
@@ -76,8 +78,8 @@ $('.slider').on("click", function turnOn(){
 //Get random Number
 function randomNumbers(){
     var random =  Math.floor((Math.random() * 4) + 1);
-    console.log(random)
     simonSeq.push(simonColors[random])
+    console.log(simonSeq)
   }
 
 
