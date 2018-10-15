@@ -45,16 +45,35 @@ function seq() {
         setTimeout(function () {
             $('.' + simonSeq[j]).removeClass('on' + simonSeq[j])
         }, (500 * (j + 1)) + 250);
+       
 
         // add sound here
     }
 }
 
 //User listener
-playerSeq.push(simonSeq[j]);
-if(playerSeq.length === simonSeq.length){
-    console.log("equal")
+$(".tile").click(function(){
+    if (start === 'off') {
+        return
+    }
+
+let color = $(this).get(0).className.split(' ')[1]
+playerSeq.push(color);
+for(let i = 0; i < playerSeq.length; i++){
+    if(playerSeq[i] === simonSeq[i]){
+        if(playerSeq.length === simonSeq.length){
+            level++;
+            $('#level').html(level)
+            playerSeq = [];
+            randomNumbers();
+        }
+    }
+
 }
+// if(playerSeq.lenth == simonSeq.length){
+    
+// }
+})
 
 
 
@@ -80,7 +99,6 @@ on.click(function start() {
 
     randomNumbers()
 
-    level++;
 
     //  PlayerSeq = [];
 })
