@@ -18,7 +18,7 @@ var round = 1;
 var win;
 var play = 'off';
 var speed = 1000;
-var audio1 = new Audio(
+var playGreen = new Audio(
     'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
   var audio2 = new Audio(
     'https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
@@ -147,6 +147,9 @@ $('.tile').on('mousedown', function () {
     }
     let brighten = $(this).get(0).className.split(' ')[1]
     $(this).addClass('on' + brighten)
+    var sound = 'play' + brighten
+    console.log(`#${sound}`)
+    $(`#${sound}`).get(0).play()
 })
 
 //On mouseup remove class
