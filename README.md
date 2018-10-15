@@ -13,8 +13,13 @@ Live site:
 
 Technologies Used
 ------
-Languages - HTML5, CSS3, jQuery
+Languages - 
+HTML5
+CSS3
+jQuery
+
 Design - 
+-------
 Project Planning & User Stories - Trello
 Visual Studio Code
 
