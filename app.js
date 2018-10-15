@@ -37,7 +37,6 @@ $('.slider').on("click", function turnOn(){
     if (start === 'off'){
      return } 
      $('#audioOn').get(0).play();
-        // on.css("background-color", "blue");
         // on.css("border-bottom" , "none");
         // on.css("border-right" , "none");
         $('#level').text(level);
@@ -45,29 +44,33 @@ $('.slider').on("click", function turnOn(){
         var i = 0
         var myInterval = setInterval(function(){
             id = simonSeq[i];
-            let color = $('.tile').get(0).className.split(' ')[1];
+            
+
+            let color = $('.tile').attr('class').split(' ')[1];
+            $('.tile').addClass('on'+ color[j])   
+            for(var j = 0; j < color.length; j++){
             console.log(color);
             i++
+            
             if(i == simonSeq.length){
                 clearInterval(myInterval);
             }
             // add sound here
+        }
 
         }, 1000);
-       
-         level ++;
-         PlayerSeq = [];
-
-        
     
 
+       
+         level ++;
+        //  PlayerSeq = [];
 })
 
 
 
 //Get random Number
 function randomNumbers(){
-    var random =  Math.floor((Math.random() * 4) + 1);
+    var random =  Math.floor((Math.random() * 4));
     simonSeq.push(random)
   
   
