@@ -11,12 +11,10 @@ var simonColors = {
 }
 var level = 0;
 var on = $('#onButton')
-var power = false;
 var playerSeq = [];
 var simonSeq = [];
 var play = 'off';
-var speed = 1000;
-var audioBuzzer = new Audio('https://s3-us-west-2.amazonaws.com/guylemon/Buzzer.mp3');
+
   
 
 
