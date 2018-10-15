@@ -16,9 +16,21 @@ var playerSeq = [];
 var simonSeq = [];
 var round = 1;
 var win;
-var start = 'off';
+var play = 'off';
 var speed = 1000;
 
+
+
+//Simon starts
+on.click(function start() {
+    play = 'on'
+    console.log(play)
+    $('#audioOn').get(0).play();
+    on.css("border-bottom", "none");
+    on.css("border-right", "none");
+
+    randomNumbers()
+})
 
 //When the game is turned on game will animate and flash to indicate turning on
 // After user pressed start button. Button will light up red for the remainder of the game. 
@@ -28,7 +40,7 @@ $('.slider').on("click", function turnOn() {
     yellow.delay(700).fadeIn(350).fadeOut(350).fadeOut(350).fadeIn(350)
     green.delay(450).fadeIn(350).fadeOut(350).fadeOut(350).fadeIn(350)
     $('#level').css("color", "black").fadeOut(350).fadeIn(350);
-    start = 'on'
+   
 
 })
 
@@ -53,7 +65,7 @@ function seq() {
 
 //User listener
 $(".tile").click(function(){
-    if (start === 'off') {
+    if (play === 'off') {
         return
     }
 
@@ -72,13 +84,12 @@ for(let i = 0; i < playerSeq.length; i++){
         playerSeq = [];
         level = 0;
         $('#level').html(level)
-        alert("Wrong!!")
+        alert("Wrong!!");
+        start = 'off'
     }
 
 }
-// if(playerSeq.lenth == simonSeq.length){
-    
-// }
+
 })
 
 
@@ -92,26 +103,11 @@ function randomNumbers() {
     }, 250)
 }
 
-//Simons sequence starts
-on.click(function start() {
-    if (start === 'off') {
-        return
-    }
-    $('#audioOn').get(0).play();
-    on.css("border-bottom", "none");
-    on.css("border-right", "none");
-    //     $('#level').text(level);
-
-
-    randomNumbers()
-
-
-    //  PlayerSeq = [];
-})
 
 //On mousedown add class 
 $('.tile').on('mousedown', function () {
-    if (start === 'off') {
+    console.log(play)
+    if (play === 'off') {
         return
     }
     let brighten = $(this).get(0).className.split(' ')[1]
@@ -120,7 +116,7 @@ $('.tile').on('mousedown', function () {
 
 //On mouseup remove class
 $('.tile').on('mouseup', function () {
-    if (start === 'off') {
+    if (play === 'off') {
         return
     }
     let brighten = $(this).get(0).className.split(' ')[1]
