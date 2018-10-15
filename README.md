@@ -21,6 +21,7 @@ jQuery
 Design - 
 -------
 Project Planning & User Stories - Trello
+https://trello.com/b/QVtLEGjv/simon-says-project-1
 Visual Studio Code
 
 Features
