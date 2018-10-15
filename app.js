@@ -67,6 +67,12 @@ for(let i = 0; i < playerSeq.length; i++){
             playerSeq = [];
             randomNumbers();
         }
+    } else {
+        simonSeq = [];
+        playerSeq = [];
+        level = 0;
+        $('#level').html(level)
+        alert("Wrong!!")
     }
 
 }
