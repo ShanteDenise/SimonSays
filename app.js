@@ -18,15 +18,7 @@ var round = 1;
 var win;
 var play = 'off';
 var speed = 1000;
-var playGreen = new Audio(
-    'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
-  var audio2 = new Audio(
-    'https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
-  var audio3 = new Audio(
-    'https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
-  var audio4 = new Audio(
-    'https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
-  var audioBuzzer = new Audio('https://s3-us-west-2.amazonaws.com/guylemon/Buzzer.mp3');
+var audioBuzzer = new Audio('https://s3-us-west-2.amazonaws.com/guylemon/Buzzer.mp3');
   
 
 
@@ -39,7 +31,6 @@ on.click(function start() {
     $('#audioOn').get(0).play();
     on.css("border-bottom", "none");
     on.css("border-right", "none");
-
     randomNumbers()
 })
 
