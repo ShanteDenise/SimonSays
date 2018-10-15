@@ -12,7 +12,7 @@ var simonColors = {
 var level = 0;
 var on = $('#onButton')
 var power = false;
-var PlayerSeq = [];
+var playerSeq = [];
 var simonSeq = [];
 var round = 1;
 var win;
@@ -48,6 +48,12 @@ function seq() {
 
         // add sound here
     }
+}
+
+//User listener
+playerSeq.push(simonSeq[j]);
+if(playerSeq.length === simonSeq.length){
+    console.log("equal")
 }
 
 
