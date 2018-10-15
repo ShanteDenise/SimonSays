@@ -18,12 +18,17 @@ var round = 1;
 var win;
 var play = 'off';
 var speed = 1000;
-var boardSound = [
-    "http://www.soundjay.com/button/sounds/button-4.mp3", //green
-    "http://www.soundjay.com/button/sounds/button-09.mp3", //red
-    "http://www.soundjay.com/button/sounds/button-10.mp3", //yellow 
-    "http://www.soundjay.com/button/sounds/button-7.mp3" //blue   
-  ];
+var audio1 = new Audio(
+    'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
+  var audio2 = new Audio(
+    'https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
+  var audio3 = new Audio(
+    'https://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
+  var audio4 = new Audio(
+    'https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
+  var audioBuzzer = new Audio('https://s3-us-west-2.amazonaws.com/guylemon/Buzzer.mp3');
+  
+
 
 
 
@@ -100,9 +105,9 @@ for(let i = 0; i < playerSeq.length; i++){
 }
 
 })
-
+// If the player wins the game. Winner picture will display
 function winner(){
-    if(level == 3){
+    if(level == 15){
         setTimeout(function () {
         $('#winner').css("display", "inline")
         },100)
