@@ -66,6 +66,8 @@ function seq() {
 }
 
 //User listener to check if Simon's sequence is equal to users sequence. 
+//If the player sequence and simons sequence is equal level up but if
+//not then reset the board and alert "wrong"
 $(".tile").click(function(){
     if (play === 'off') {
         return
@@ -74,20 +76,20 @@ $(".tile").click(function(){
 let color = $(this).get(0).className.split(' ')[1]
 playerSeq.push(color);
 for(let i = 0; i < playerSeq.length; i++){
-    if(playerSeq[i] === simonSeq[i]){
-        if(playerSeq.length === simonSeq.length){
+    if(playerSeq[i] === simonSeq[i] || playerSeq.length === simonSeq.length){
             level++;
             $('#level').html(level)
             playerSeq = [];
             randomNumbers();
             winner();
-        }
+        
     } else {
         simonSeq = [];
         playerSeq = [];
+        $('#audioBuzzer').get(0).play();
+        alert("Game Over!!" + "Your Score is" + " " + level);
         level = 0;
         $('#level').html(level)
-        alert("Wrong!!");
         start = 'off'
         on.css("border-bottom", "solid 7px rgb(61, 7, 7)");
         on.css("border-right", "solid 2px rgb(43, 7, 2)");
@@ -139,7 +141,6 @@ $('.tile').on('mousedown', function () {
     let brighten = $(this).get(0).className.split(' ')[1]
     $(this).addClass('on' + brighten)
     var sound = 'play' + brighten
-    console.log(`#${sound}`)
     $(`#${sound}`).get(0).play()
 })
 
