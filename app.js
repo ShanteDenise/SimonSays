@@ -97,9 +97,19 @@ for(let i = 0; i < playerSeq.length; i++){
 
 function winner(){
     if(level == 3){
-        console.log("Winner")
+        setTimeout(function () {
+        $('#winner').css("display", "inline")
+        },100)
+
+        level = 0;
+        $('#level').html(level)
         playerSeq = [];
         simonSeq = [];
+
+        setTimeout(function () {
+            $('#winner').css("display", "none")
+            },4000)
+
         start = 'off'
 
     }
