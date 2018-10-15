@@ -18,6 +18,12 @@ var round = 1;
 var win;
 var play = 'off';
 var speed = 1000;
+var boardSound = [
+    "http://www.soundjay.com/button/sounds/button-4.mp3", //green
+    "http://www.soundjay.com/button/sounds/button-09.mp3", //red
+    "http://www.soundjay.com/button/sounds/button-10.mp3", //yellow 
+    "http://www.soundjay.com/button/sounds/button-7.mp3" //blue   
+  ];
 
 
 
