@@ -76,13 +76,15 @@ $(".tile").click(function(){
 let color = $(this).get(0).className.split(' ')[1]
 playerSeq.push(color);
 for(let i = 0; i < playerSeq.length; i++){
-    if(playerSeq[i] === simonSeq[i] || playerSeq.length === simonSeq.length){
+    if(playerSeq[i] === simonSeq[i]){
+        if(playerSeq.length === simonSeq.length){
             level++;
             $('#level').html(level)
             playerSeq = [];
             randomNumbers();
             winner();
-        
+        }
+
     } else {
         simonSeq = [];
         playerSeq = [];
@@ -98,6 +100,7 @@ for(let i = 0; i < playerSeq.length; i++){
 }
 
 })
+
 // If the player wins the game. Winner picture will display
 function winner(){
     if(level == 15){
