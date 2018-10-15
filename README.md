@@ -33,7 +33,7 @@ Highlights Sequences on click
 
 Wireframe
 -------
-
+/Users/cb_atl_124_shante_austin/Desktop/GA_project1/images/wireframes.jpg
 
 
 
