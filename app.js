@@ -14,14 +14,10 @@ var on = $('#onButton')
 var power = false;
 var playerSeq = [];
 var simonSeq = [];
-var round = 1;
-var win;
 var play = 'off';
 var speed = 1000;
 var audioBuzzer = new Audio('https://s3-us-west-2.amazonaws.com/guylemon/Buzzer.mp3');
   
-
-
 
 
 //Simon starts
@@ -96,14 +92,13 @@ for(let i = 0; i < playerSeq.length; i++){
         on.css("border-bottom", "solid 7px rgb(61, 7, 7)");
         on.css("border-right", "solid 2px rgb(43, 7, 2)");
     }
-
 }
 
 })
 
 // If the player wins the game. Winner picture will display
 function winner(){
-    if(level == 15){
+    if(level == 10){
         setTimeout(function () {
         $('#winner').css("display", "inline")
         },100)
@@ -118,14 +113,11 @@ function winner(){
             },4000)
 
         start = 'off'
-
     }
 }
-    
-
-
-
+   
 //Get random Number
+//Push random number into simonColors 
 function randomNumbers() {
     var random = Math.floor((Math.random() * 4) + 1);
     simonSeq.push(simonColors[random])
@@ -135,7 +127,7 @@ function randomNumbers() {
 }
 
 
-//On mousedown add class 
+//On mousedown add class but if play is off. Do not do anything
 $('.tile').on('mousedown', function () {
     console.log(play)
     if (play === 'off') {
