@@ -96,9 +96,10 @@ for(let i = 0; i < playerSeq.length; i++){
 
 // If the player wins the game. Winner picture will display
 function winner(){
-    if(level == 10){
+    if(level == 3){
         setTimeout(function () {
         $('#winner').css("display", "inline")
+        $('#congrats').get(0).play();
         },100)
 
         level = 0;
@@ -108,6 +109,7 @@ function winner(){
 
         setTimeout(function () {
             $('#winner').css("display", "none")
+            $('#congrats').get(0).pause();
             },4000)
 
         start = 'off'
