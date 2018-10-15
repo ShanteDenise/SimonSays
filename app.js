@@ -63,7 +63,7 @@ function seq() {
     }
 }
 
-//User listener
+//User listener to check if Simon's sequence is equal to users sequence. 
 $(".tile").click(function(){
     if (play === 'off') {
         return
@@ -78,6 +78,7 @@ for(let i = 0; i < playerSeq.length; i++){
             $('#level').html(level)
             playerSeq = [];
             randomNumbers();
+            winner();
         }
     } else {
         simonSeq = [];
@@ -86,11 +87,24 @@ for(let i = 0; i < playerSeq.length; i++){
         $('#level').html(level)
         alert("Wrong!!");
         start = 'off'
+        on.css("border-bottom", "solid 7px rgb(61, 7, 7)");
+        on.css("border-right", "solid 2px rgb(43, 7, 2)");
     }
 
 }
 
 })
+
+function winner(){
+    if(level == 3){
+        console.log("Winner")
+        playerSeq = [];
+        simonSeq = [];
+        start = 'off'
+
+    }
+}
+    
 
 
 
