@@ -5,6 +5,7 @@ Overview
 ------
 
 For project #1, I created my version of the famous Simon Says game.
+https://wizardly-shaw-a1dd1b.netlify.com/
 
 When the game is turned on and the start button is pressed, Simon will provide a sequence. The first sequnce will be one and will increase every time the users input equals the sequence of simon.  When the player reached level 15. The player will win the game and the game will start over. If the players sequence is not equal to simons sequence an alert will appear informing the player that the move was "Wrong", and the game will start over. 
 
