@@ -45,3 +45,4 @@ Create a restart button
 Add a strict mode
 Local storage of users best score
 Responsive for mobile users
+Alert Box redesigned using sweetalert2
