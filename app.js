@@ -15,8 +15,6 @@ var playerSeq = [];
 var simonSeq = [];
 var play = 'off';
 
-  
-
 
 //Simon starts
 on.click(function start() {
@@ -49,13 +47,9 @@ function seq() {
         $('.' + simonSeq[j]).addClass('on' + simonSeq[j])
         },500 * (j + 1));
 
-
         setTimeout(function () {
             $('.' + simonSeq[j]).removeClass('on' + simonSeq[j])
         }, (500 * (j + 1)) + 250);
-       
-
-        // add sound here
     }
 }
 
@@ -96,7 +90,7 @@ for(let i = 0; i < playerSeq.length; i++){
 
 // If the player wins the game. Winner picture will display
 function winner(){
-    if(level == 10){
+    if(level == 20){
         setTimeout(function () {
         $('#winner').css("display", "inline")
         $('#congrats').get(0).play();
