@@ -35,7 +35,8 @@ Highlights Sequences on click
 
 Wireframe
 -------
-/Users/cb_atl_124_shante_austin/Desktop/GA_project1/images/wireframes.jpg
+![screen shot 2018-11-06 at 8 35 16 am](https://user-images.githubusercontent.com/33140493/48067743-02edf900-e19f-11e8-849e-56650fcf2a20.png)
+
 
 
 
