@@ -5,12 +5,14 @@ Overview
 ------
 
 For project #1, I created my version of the famous Simon Says game.
-https://nifty-rosalind-c4746f.netlify.com
 
-When the game is turned on and the start button is pressed, Simon will provide a sequence. The first sequnce will be one and will increase every time the users input equals the sequence of simon.  When the player reached level 15. The player will win the game and the game will start over. If the players sequence is not equal to simons sequence an alert will appear informing the player that the move was "Wrong", and the game will start over. 
+
+When the game is turned on and the start button is pressed, Simon will provide a sequence. 
+At each level simon's sequence will increase by one. The user's input must equal the sequence of simon.  When the player reachs level 20 the player will win the game and the game will start over automatically. If the user's sequence is not equal to simons sequence at an time, an alert will appear providing the users score (score = level) and the game will start over automatically. 
 
 Live site: 
 ------
+https://sleepy-shirley-b10d9c.netlify.com/
 
 Technologies Used
 ------
@@ -41,4 +43,5 @@ Future Development
 -------
 Create a restart button
 Add a strict mode
-Add sound on click.
+Local storage of users best score
+Responsive for mobile users
