@@ -12,7 +12,7 @@ At each level simon's sequence will increase by one. The user's input must equal
 
 Live site: 
 ------
-https://sleepy-shirley-b10d9c.netlify.com/
+https://suspicious-ramanujan-13266b.netlify.com/
 
 Technologies Used
 ------
