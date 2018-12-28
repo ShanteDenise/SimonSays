@@ -6,9 +6,10 @@ Overview
 
 For project #1, I created my version of the famous Simon Says game.
 
-
-When the game is turned on and the start button is pressed, Simon will provide a sequence. 
-At each level simon's sequence will increase by one. The user's input must equal the sequence of simon.  When the player reachs level 20 the player will win the game and the game will start over automatically. If the user's sequence is not equal to simons sequence at an time, an alert will appear providing the users score (score = level) and the game will start over automatically. 
+Instructions
+-------
+When Simon says is switched to on and the start button is pressed, Simon will provide a sequence.
+The player is expected to have an exact match to Simon's sequence. At each level simon's sequence will increase by one. When the player reachs level 20 the player will win the game and the game will start over, automatically. If the user's sequence is not equal to simons sequence at any time, an alert will appear providing the users score (score = level) and the game will start over. 
 
 Live site: 
 ------
