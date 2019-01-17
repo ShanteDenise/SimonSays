@@ -34,8 +34,6 @@ $('.slider').on("click", function turnOn() {
     yellow.delay(700).fadeIn(350).fadeOut(350).fadeOut(350).fadeIn(350)
     green.delay(450).fadeIn(350).fadeOut(350).fadeOut(350).fadeIn(350)
     $('#level').css("color", "black").fadeOut(350).fadeIn(350);
-   
-
 })
 
 //If the start is off do nothing. If the start is turned on then play clicking sound 
@@ -109,7 +107,7 @@ function winner(){
         start = 'off'
     }
 }
-   
+  
 //Get random Number
 //Push random number into simonColors 
 function randomNumbers() {
@@ -119,8 +117,6 @@ function randomNumbers() {
         seq()
     }, 250)
 }
-
-
 //On mousedown add class but if play is off. Do not do anything
 $('.tile').on('mousedown', function () {
     console.log(play)
